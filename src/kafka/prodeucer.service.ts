@@ -4,7 +4,7 @@ import { Kafka,Producer,ProducerRecord } from 'kafkajs';
 @Injectable()
 export class ProdeucerService implements OnModuleInit {
   private readonly kafka = new Kafka({
-    brokers: ['DESKTOP-82T96U7:9092'],
+    brokers: ['localhost:9092'],
   });
   private readonly producer: Producer = this.kafka.producer();
 

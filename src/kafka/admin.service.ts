@@ -4,7 +4,7 @@ import { Consumer, Kafka } from 'kafkajs';
 @Injectable()
 export class AdminService {
   private readonly admin = new Kafka({
-    brokers: ['DESKTOP-82T96U7:9092'],
+    brokers: ['localhost:9092'],
   }).admin();
   private readonly consumers: Consumer[] = [];
 

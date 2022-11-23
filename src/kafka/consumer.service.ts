@@ -9,7 +9,7 @@ import {
 @Injectable()
 export class ConsumerService {
   private readonly kafka = new Kafka({
-    brokers: ['DESKTOP-82T96U7:9092'],
+    brokers: ['localhost:9092'],
   });
   private readonly consumers: Consumer[] = [];
 
@@ -19,7 +19,7 @@ export class ConsumerService {
     await consumer.subscribe(topic);
     await consumer.run(config);
     this.consumers.push(consumer);
-    
+
   }
 
   async onApplicationShutdown(signal?: string) {
